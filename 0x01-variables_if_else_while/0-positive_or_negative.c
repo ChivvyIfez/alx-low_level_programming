@@ -3,17 +3,18 @@
 #include <stdio.h>
 
 /**
- *main - Entry point
+ *main - Prints if n is positive, zero or negative
  *
- *Return: Always (Sucess)
+ *Return: Always 0 (Sucess)
  */
+
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	
+
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
