@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
- *main - Entry point
- *Return: 0
+ *main - Prints if n is positive, zero or negative
+ *
+ *Return: Always 0 (Sucess)
  */
 
 int main(void)
