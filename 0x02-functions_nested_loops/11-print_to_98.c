@@ -2,6 +2,7 @@
 #include "main.h"
 /**
  * print_to_98 - Prints number from 0 to 98 in order
+ * @n: parameter to check
  */
 
 void print_to_98(int n)
