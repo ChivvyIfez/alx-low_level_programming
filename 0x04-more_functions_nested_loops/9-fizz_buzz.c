@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -6,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-in main(void)
+int main(void)
 {
 	int i;
 
