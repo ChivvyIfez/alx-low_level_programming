@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_buffer - function that prints a buffer
@@ -36,7 +37,7 @@ void print_buffer(char *b, int size)
 		{
 			int c = *(b + k + i);
 
-			if (c < 32 || c > 32)
+			if (c < 32 || c > 132)
 			{
 				c = '.';
 			}
