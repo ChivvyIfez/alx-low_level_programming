@@ -11,10 +11,10 @@ int natural_sqrt_recursion(int x, int y);
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
 	int i = 1;
 
+	if (n < 0)
+		return (-1);
 	return (natural_sqrt_recursion(i, n));
 }
 
