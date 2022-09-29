@@ -1,6 +1,6 @@
 #include "main.h"
 
-int prime_num(int x, int y);
+int prime_num(unsigned int x, unsigned int y);
 
 /**
  * is_prime_number - returns 1 if the input is prime number
