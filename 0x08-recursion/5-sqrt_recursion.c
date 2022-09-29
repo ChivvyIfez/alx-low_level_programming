@@ -13,7 +13,9 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (natural_sqrt_recursion(n, 0));
+	int i = 1;
+
+	return (natural_sqrt_recursion(i, n));
 }
 
 /**
