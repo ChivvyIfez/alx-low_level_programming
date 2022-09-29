@@ -26,12 +26,8 @@ int _sqrt_recursion(int n)
 int natural_sqrt_recursion(int x, int y)
 {
 	if (x * x > y)
-	{
 		return (-1);
-	}
-	else if (x * x == y)
-	{
+	if (x * x == y)
 		return (x);
-	}
 	return (natural_sqrt_recursion(y, x + 1));
 }
