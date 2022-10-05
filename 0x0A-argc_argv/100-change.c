@@ -25,15 +25,15 @@ int main(int argc, char *argv[])
 	while (cents > 0)
 	{
 		if (cents - 25 >= 0)
-			balance -= 25;
+			cents -= 25;
 		else if (cents - 10 >= 0)
-			balance -= 10;
+			cents -= 10;
 		else if (cents - 5 >= 0)
-			balance -= 5;
+			cents -= 5;
 		else if (cents - 2 >= 0)
-			balance -= 2;
+			cents -= 2;
 		else if (cents - 1 >= 0)
-			balance -= 1;
+			cents -= 1;
 		balance++;
 	}
 	printf("%d\n", balance);
