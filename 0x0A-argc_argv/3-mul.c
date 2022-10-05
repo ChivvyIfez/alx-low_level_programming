@@ -17,16 +17,16 @@ int main(int argc, char *argv[])
 
 	if (argc == 3)
 	{
-		for(i = 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
 			prod = prod * atoi(argv[i]);
+			printf("%d\n", prod);
 		}
-		print("%d\n", prod);
-		return (0);
 	}
 	else
 	{
-		print("Error\n");
+		printf("Error\n");
 		return (1);
 	}
+	return (0);
 }
