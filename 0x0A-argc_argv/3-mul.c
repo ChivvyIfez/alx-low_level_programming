@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	prod = 1;
 
-	if (argc == 3)
+	if (argc > 3)
 	{
 		for (i = 1; i < argc; i++)
 		{
