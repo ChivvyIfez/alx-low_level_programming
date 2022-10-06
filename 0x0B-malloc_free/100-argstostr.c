@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (k = 0; av[j][k]; k++)
 			;
-		l = l + c + 1;
+		l = l + k + 1;
 	}
 	ptr = malloc(l + 1);
 
