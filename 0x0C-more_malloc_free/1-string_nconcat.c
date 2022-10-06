@@ -25,18 +25,20 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int i, j, len;
+	int i, j, len, num;
+
+	num = n; /* changing n type */
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	if (n < 0)
+	if (num < 0)
 		return (NULL);
-	if (n >= _strlen(s2))
-		n = _strlen(s2);
+	if (num >= _strlen(s2))
+		num = _strlen(s2);
 
-	len = _strlen(s1) + n + 1;
+	len = _strlen(s1) + num + 1;
 
 	ptr = malloc(sizeof(*ptr) * len);
 	if (ptr == NULL)
@@ -45,10 +47,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s1[i] != '\0')
 	{
 		ptr[i] = s1[i];
-		i++
+		i++;
 	}
 	j = 0;
-	while (j < n)
+	while (j < num)
 	{
 		ptr[i + j] = s2[j];
 		j++;
