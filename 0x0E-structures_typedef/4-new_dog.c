@@ -2,28 +2,6 @@
 #include <stdlib.h>
 
 /**
- * _strcpy - To copy string
- * @s: string
- * Return: resulting pointer
- */
-char _strcpy(char *s)
-{
-	int i;
-	char *d;
-
-	i = 0;
-	while (s[i])
-		i++;
-	d = malloc(i + 1);
-	if (d)
-	{
-		for (; i >= 0; i--)
-			d[i] = s[i];
-	}
-	return (d);
-}
-
-/**
  * new_dog - function that creates a new dog
  * @name: dog's name
  * @age: dog's age
@@ -32,23 +10,49 @@ char _strcpy(char *s)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	int i, ln, lo;
 
-	d = malloc(sizeof(*d));
+	struct dog *d = NULL;
+
+	ln = 0;
+	while (name[ln] != '\0')
+		ln++;
+	lo = 0;
+	while (owner[lo] != '\0')
+		lo++;
+	d = malloc(sizeof(struct dog));
 	if (d == NULL)
-		return (NULL);
-	d->name = _strcpy(name);
-	if (d->name == NULL)
 	{
 		free(d);
 		return (NULL);
 	}
-	d->age = age;
-	d->owner = _strcpy(owner);
-	if (d->owner == NULL)
+	d->name = malloc(ln + 1);
+	if (d->name == NULL)
 	{
 		free(d->name);
 		free(d);
 		return (NULL);
 	}
+	d->owner = malloc(lo + 1);
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+		return (NULL);
+	}
+	i = 0;
+	while (i <= ln)
+	{
+		d->name[i] = name[i];
+		i++;
+	}
+	i = 0;
+	while (i <= lo)
+	{
+		d->owner[i] = owner[i];
+		i++;
+	}
+	d->age = age;
+	return (d);
 }
