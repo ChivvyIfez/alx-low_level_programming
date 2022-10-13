@@ -6,12 +6,12 @@
  * @argv: argument vector
  * Return: 0 on success othereise Error(98)
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, answer;
 	char s;
 
-	num1 = 0, num2 = 0, reva = 0;
+	num1 = 0, num2 = 0, answer = 0;
 
 	if (argc != 4)
 	{
