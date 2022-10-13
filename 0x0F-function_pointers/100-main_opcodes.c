@@ -7,7 +7,7 @@
  * @argv: argument vector
  * Return: 0 on success
  */
-int mian(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i, bytes;
 
