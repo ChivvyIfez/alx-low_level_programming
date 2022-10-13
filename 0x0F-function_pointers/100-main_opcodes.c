@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (bytes < 0)
 	{
-		printf("Erro\n");
+		printf("Error\n");
 		exit(2);
 	}
 	for (i = 0; i < bytes; i++)
